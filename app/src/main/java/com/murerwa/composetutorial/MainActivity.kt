@@ -18,26 +18,29 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Top,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(Color.Green)
-                    .padding(10.dp)
-            ) {
-                Text(text = "Hello")
-                Spacer(modifier = Modifier.height(10.dp))
-                Text(text = "World")
-            }
+            MainBody()
+        }
+    }
+
+    @Composable
+    fun MainBody(){
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Top,
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Green)
+                .padding(10.dp)
+        ) {
+            Text(text = "Hello")
+            Spacer(modifier = Modifier.height(10.dp))
+            Text(text = "World")
         }
     }
 
     @Preview(showBackground = true)
     @Composable
     fun DefaultPreview() {
-        ComposeTutorialTheme {
-
-        }
+        MainBody()
     }
 }
