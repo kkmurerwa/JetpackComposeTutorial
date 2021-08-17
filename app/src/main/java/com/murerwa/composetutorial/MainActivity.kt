@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
             verticalArrangement = Arrangement.Top,
             modifier = Modifier
                 .fillMaxSize()
-                .background(Color.Green)
+                .background(Color.LightGray)
                 .padding(10.dp)
         ) {
             Text(text = "Hello")
